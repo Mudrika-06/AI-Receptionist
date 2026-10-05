@@ -45,91 +45,91 @@ for message in st.session_state.messages:
 
 def generate_response(intent):
 
-responses = {
-
-    "greeting":
-        "👋 Hello! Welcome! How may I assist you today?",
-
-    "timings":
-        "🕘 **Office Timings**\n\n"
-        "Monday to Friday: **9:00 AM – 5:00 PM**\n\n"
-        "Saturday: **9:00 AM – 1:00 PM**\n\n"
-        "Sunday: **Closed**.",
-
-    "location":
-        "📍 The reception desk is located at the "
-        "**main entrance on the ground floor**.",
-
-    "hr":
-        "👥 The **HR Department** is located on the "
-        "**first floor**.",
-
-    "appointment":
-        "📅 **Sure! I can help you book an appointment.**\n\n"
-        "Please provide:\n"
-        "1. Your name\n"
-        "2. Person you want to meet\n"
-        "3. Preferred date\n"
-        "4. Preferred time",
-
-    "contact":
-        "📞 **Contact Information**\n\n"
-        "Phone: **+91-9876543210**\n\n"
-        "Email: **reception@example.com**",
-
-    "thanks":
-        "You're very welcome! 😊\n\n"
-        "Is there anything else I can help you with?",
-
-    "goodbye":
-        "Goodbye! 👋\n\n"
-        "Thank you for visiting. Have a wonderful day!"
-}
-
-return responses.get(
-    intent,
-    "I'm sorry, I couldn't understand your request. "
-    "Could you please rephrase your question?"
-)
-
-st.markdown("### 💡 How can I help you?")
-
-col1, col2 = st.columns(2)
-
-with col1:
-
-office_button = st.button(
-    "🏢 Office Information",
-    use_container_width=True
-)
-
-department_button = st.button(
-    "👥 Departments",
-    use_container_width=True
-)
-
-appointment_button = st.button(
-    "📅 Book Appointment",
-    use_container_width=True
-)
-
-with col2:
-
-timings_button = st.button(
-    "🕘 Office Timings",
-    use_container_width=True
-)
-
-contact_button = st.button(
-    "📞 Contact Us",
-    use_container_width=True
-)
-
-location_button = st.button(
-    "📍 Location",
-    use_container_width=True
-)
-
+    responses = {
+    
+        "greeting":
+            "👋 Hello! Welcome! How may I assist you today?",
+    
+        "timings":
+            "🕘 **Office Timings**\n\n"
+            "Monday to Friday: **9:00 AM – 5:00 PM**\n\n"
+            "Saturday: **9:00 AM – 1:00 PM**\n\n"
+            "Sunday: **Closed**.",
+    
+        "location":
+            "📍 The reception desk is located at the "
+            "**main entrance on the ground floor**.",
+    
+        "hr":
+            "👥 The **HR Department** is located on the "
+            "**first floor**.",
+    
+        "appointment":
+            "📅 **Sure! I can help you book an appointment.**\n\n"
+            "Please provide:\n"
+            "1. Your name\n"
+            "2. Person you want to meet\n"
+            "3. Preferred date\n"
+            "4. Preferred time",
+    
+        "contact":
+            "📞 **Contact Information**\n\n"
+            "Phone: **+91-9876543210**\n\n"
+            "Email: **reception@example.com**",
+    
+        "thanks":
+            "You're very welcome! 😊\n\n"
+            "Is there anything else I can help you with?",
+    
+        "goodbye":
+            "Goodbye! 👋\n\n"
+            "Thank you for visiting. Have a wonderful day!"
+    }
+    
+    return responses.get(
+        intent,
+        "I'm sorry, I couldn't understand your request. "
+        "Could you please rephrase your question?"
+    )
+    
+    st.markdown("### 💡 How can I help you?")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+    
+    office_button = st.button(
+        "🏢 Office Information",
+        use_container_width=True
+    )
+    
+    department_button = st.button(
+        "👥 Departments",
+        use_container_width=True
+    )
+    
+    appointment_button = st.button(
+        "📅 Book Appointment",
+        use_container_width=True
+    )
+    
+    with col2:
+    
+    timings_button = st.button(
+        "🕘 Office Timings",
+        use_container_width=True
+    )
+    
+    contact_button = st.button(
+        "📞 Contact Us",
+        use_container_width=True
+    )
+    
+    location_button = st.button(
+        "📍 Location",
+        use_container_width=True
+    )
+    
 selected_question = None
 
 if office_button:
