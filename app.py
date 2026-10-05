@@ -1,9 +1,9 @@
-# import streamlit as st
-# import spacy
-# import re
-# from datetime import datetime
-# from sklearn.feature_extraction.text import TfidfVectorizer
-# from sklearn.linear_model import LogisticRegression
+import streamlit as st
+import spacy
+import re
+from datetime import datetime
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
 
 nlp = spacy.load("en_core_web_sm")
 
