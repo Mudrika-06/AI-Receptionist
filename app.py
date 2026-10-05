@@ -16,25 +16,25 @@ st.write(
 )
 
 if "messages" not in st.session_state:
-st.session_state.messages = []
+    st.session_state.messages = []
 
 if "greeted" not in st.session_state:
-st.session_state.greeted = False
+    st.session_state.greeted = False
 
 if not st.session_state.greeted:
 
-greeting = (
-    "👋 **Hello! Welcome to our organization!**\n\n"
-    "I'm your **AI Virtual Receptionist**. "
-    "I can help you with office information, "
-    "departments, appointments, timings, and contact details.\n\n"
-    "**How may I assist you today?**"
-)
-
+    greeting = (
+        "👋 **Hello! Welcome to our organization!**\n\n"
+        "I'm your **AI Virtual Receptionist**. "
+        "I can help you with office information, "
+        "departments, appointments, timings, and contact details.\n\n"
+        "**How may I assist you today?**"
+    )
+    
 st.session_state.messages.append({
-    "role": "assistant",
-    "content": greeting
-})
+        "role": "assistant",
+        "content": greeting
+    })
 
 st.session_state.greeted = True
 
