@@ -5,8 +5,11 @@ from datetime import datetime
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
-nlp = spacy.load("en_core_web_sm")
+# nlp = spacy.load("en_core_web_sm")
+# import streamlit as st
+# import spacy
 
+nlp = spacy.load("en_core_web_sm")
 
 training_sentences = [
     # Greeting
