@@ -97,38 +97,38 @@ def generate_response(intent):
     col1, col2 = st.columns(2)
     
     with col1:
-    
-    office_button = st.button(
-        "🏢 Office Information",
-        use_container_width=True
-    )
-    
-    department_button = st.button(
-        "👥 Departments",
-        use_container_width=True
-    )
-    
-    appointment_button = st.button(
-        "📅 Book Appointment",
-        use_container_width=True
-    )
+        
+        office_button = st.button(
+            "🏢 Office Information",
+            use_container_width=True
+        )
+        
+        department_button = st.button(
+            "👥 Departments",
+            use_container_width=True
+        )
+        
+        appointment_button = st.button(
+            "📅 Book Appointment",
+            use_container_width=True
+        )
     
     with col2:
     
-    timings_button = st.button(
-        "🕘 Office Timings",
-        use_container_width=True
-    )
-    
-    contact_button = st.button(
-        "📞 Contact Us",
-        use_container_width=True
-    )
-    
-    location_button = st.button(
-        "📍 Location",
-        use_container_width=True
-    )
+        timings_button = st.button(
+            "🕘 Office Timings",
+            use_container_width=True
+        )
+        
+        contact_button = st.button(
+            "📞 Contact Us",
+            use_container_width=True
+        )
+        
+        location_button = st.button(
+            "📍 Location",
+            use_container_width=True
+        )
     
 selected_question = None
 
