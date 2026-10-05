@@ -1,5 +1,4 @@
 import streamlit as st
-
 from nlp.intent_classifier import predict_intent
 from nlp.entity_extractor import extract_entities
 
