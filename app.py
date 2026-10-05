@@ -132,40 +132,40 @@ def generate_response(intent):
     
 selected_question = None
     
-    if office_button:
-        selected_question = "Where is the office?"
+if office_button:
+    selected_question = "Where is the office?"
     
-    elif department_button:
-        selected_question = "Where is the HR department?"
+elif department_button:
+    selected_question = "Where is the HR department?"
     
-    elif appointment_button:
-        selected_question = "I want to book an appointment"
+elif appointment_button:
+    selected_question = "I want to book an appointment"
     
-    elif timings_button:
-        selected_question = "What are the office timings?"
+elif timings_button:
+    selected_question = "What are the office timings?"
+
+elif contact_button:
+    selected_question = "What is the contact number?"
+
+elif location_button:
+    selected_question = "Where is the reception?"
+
+if selected_question:
     
-    elif contact_button:
-        selected_question = "What is the contact number?"
+    st.session_state.messages.append({
+        "role": "user",
+        "content": selected_question
+    })
     
-    elif location_button:
-        selected_question = "Where is the reception?"
+    intent, confidence = predict_intent(
+        selected_question
+    )
     
-    if selected_question:
-        
-        st.session_state.messages.append({
-            "role": "user",
-            "content": selected_question
-        })
-        
-        intent, confidence = predict_intent(
-            selected_question
-        )
-        
-        response = generate_response(intent)
-        
-        st.session_state.messages.append({
-            "role": "assistant",
-            "content": response
-        })
-        
-        st.rerun()
+    response = generate_response(intent)
+    
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": response
+    })
+    
+    st.rerun()
