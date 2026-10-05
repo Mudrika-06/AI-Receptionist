@@ -40,8 +40,8 @@ st.session_state.greeted = True
 
 for message in st.session_state.messages:
 
-with st.chat_message(message["role"]):
-    st.markdown(message["content"])
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
 def generate_response(intent):
 
@@ -133,39 +133,39 @@ location_button = st.button(
 selected_question = None
 
 if office_button:
-selected_question = "Where is the office?"
+    selected_question = "Where is the office?"
 
 elif department_button:
-selected_question = "Where is the HR department?"
+    selected_question = "Where is the HR department?"
 
 elif appointment_button:
-selected_question = "I want to book an appointment"
+    selected_question = "I want to book an appointment"
 
 elif timings_button:
-selected_question = "What are the office timings?"
+    selected_question = "What are the office timings?"
 
 elif contact_button:
-selected_question = "What is the contact number?"
+    selected_question = "What is the contact number?"
 
 elif location_button:
-selected_question = "Where is the reception?"
+    selected_question = "Where is the reception?"
 
 if selected_question:
-
-st.session_state.messages.append({
-    "role": "user",
-    "content": selected_question
-})
-
-intent, confidence = predict_intent(
-    selected_question
-)
-
-response = generate_response(intent)
-
-st.session_state.messages.append({
-    "role": "assistant",
-    "content": response
-})
-
-st.rerun()
+    
+    st.session_state.messages.append({
+        "role": "user",
+        "content": selected_question
+    })
+    
+    intent, confidence = predict_intent(
+        selected_question
+    )
+    
+    response = generate_response(intent)
+    
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": response
+    })
+    
+    st.rerun()
